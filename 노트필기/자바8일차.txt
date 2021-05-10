@@ -1,0 +1,23 @@
+[ GUI 프로그래밍 , 윈도우 프로그래밍]
+ - 그래픽으로 프로그램을 조작할 수 있도록 작성 
+
+[java의 GUI] 
+awt/swing/ -->  java FX  
+
+[GUI의 배치관리자]
+★FlowLayout : 수직 또는 수평으로 배치
+★BorderLayout : 동,서,남,북,센터의 방위로 배치
+★GridLayout : 격자형태로 배치 (row, col)
+GridBagLayout : 좌표이용(유지보수 복잡하고, 까다롭다)
+CardLayout : 카드를 보여주는 방식으로, 주로 화면전환, 메뉴에 사용 
+
+[GUI 컴포넌트 구성]
+포함관계를 기준 - 포함능력O ( Container) : Frame, Panel
+                                                      배치능력이 있으므로, 배치관리자를 사용할 수 있다. 
+                    포함능력X ( Visual 컴포넌트)
+
+만일 개발자가 컨테이너 이용시 배치관리자를 적용하지 않는 다면??
+힌트) 배치관리자 없는 배치는 불가능하다!! 
+       따라서 시스템에 의해 즉 디폴트 배치관리자가 적용된다..
+       Frame : BorderLayout가 디폴트
+       Panel : FlowLayout가 디폴트
