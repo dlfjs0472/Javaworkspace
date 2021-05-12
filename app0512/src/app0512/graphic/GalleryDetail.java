@@ -10,8 +10,7 @@ public class GalleryDetail extends JPanel{
 	private Image image;
 	//누군가에 의해 Image를 념겨받으려면, 메서드를 준비해놓아야 한다!!!
 	public void setImage(Image image) {
-		this.image = image;
-		this.image = this.image.getScaledInstance(500, 340, Image.SCALE_SMOOTH);
+		this.image = image.getScaledInstance(500, 400, Image.SCALE_SMOOTH);
 	}
 
 	public void paint(Graphics g) {
