@@ -1,0 +1,16 @@
+[이벤트 처리]
+-처리단계
+ (1)이벤트가 발생하면 OS가 감지
+ (2)OS는 JVM에게 해당 이벤트 정보를 전달한다
+ (3)JVM은 전달받은 이벤트에 해당하는 Event객체의 인스턴스를 올린다
+ (4)생성된 Event의 인스턴스는 알맞는 Listener에게 전달된다..
+ (5)전달된 Event의 인스턴스를 이용해서 어떤 작업을 처리할지는 개발자가 결정한다..
+	이때 개발자는 미완성 객체인 인터페이스의 추상 메서드를 Override한다
+
+-이벤트 연결
+  이벤트를 일으킨 UI컴포넌트를 Event Source라 하는데, 이 EventSource와 
+  리스너를 연결해야 한다.
+  ex) 이벤트소스.addActionListener(Action리스너의 인스턴스);
+       이벤트소스.addWindowListener(Window 리스너의 인스턴스);
+       이벤트소스.addMouseListener(Mouse 리스너의 인스턴스);
+       이벤트소스.addKeyListener(Key 리스너의 인스턴스);
