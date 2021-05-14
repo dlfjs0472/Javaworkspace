@@ -1,0 +1,44 @@
+[복습]
+Collection Framework
+개념 -  객체를 모아서 처리하는데 유용한 api 모음 
+지원 package - java.util
+유형 - List, Set, Map
+(1)List : 순서가 있다, 배열과 거의 같다 
+	     배열과의 차이점 - 크기가 동적으로 변경, 객체만을 대상
+(2)Set : 순서없는 객체의 집합, 중복된 허용하지 않음 
+	     순서가 없으므로, 반복문으로 요소에 직접 접근할 수 없다(규칙없으니깐)
+	     Iterator, Enumeration	     	
+(3)Map : Key-Value 의 쌍으로 객체를 다루는 방법 
+              반복문을 이용하여 요소에 접근불가하므로, Set을 이용 
+
+improved for loop (개선된 포문)
+for( 컬렉션의 요소 : 컬렉션 객체){
+}
+
+Generic Type
+List<String> 으로 선언하면,  String만을 처리 대상으로 한정 지음 
+List<String> 자체가 자료형 
+
+[  스트림 : Stream]
+
+현실: Stream의 뜻: 물줄기, 지류...물이 흐르는 것
+전산: Stream의 뜻 : 흐르는 대상? 물이 아닌 데이터다!!
+
+스트림은 방향이 있다.
+방향의 기준은 실행중인 프로그램(즉 프로세스)이다!!!
+(1) 프로그램으로 데이터가 들어가는 것: 입력스트림 (InputStream)
+(2) 프로그램에서 데이터가 흘러 나가는 것: 출력스트립(OutputStream)
+     IO(입력과출력)
+
+스트림의 분류
+(1)방향을 기준 : 입력, 출력
+(2)데이터 처리 방식 : 
+바이트 기반 : 읽거나(입력), 쓸때(출력) 데이터를 1byte씩 처리
+	     ex) fis.read(); //1byte
+	          fos.write(data); //1byte
+문자 기반 : ~~Reader
+
+버퍼기반 : 
+
+
+
