@@ -1,0 +1,62 @@
+mysql> create database shoppingapp;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| 1stproject         |
+| javase             |
+| mydb               |
+| mysql              |
+| nodejs             |
+| performance_schema |
+| shoppingapp        |
+| shoppingmall       |
+| study              |
+| sys                |
++--------------------+
+11 rows in set (0.00 sec)
+
+mysql> use shoppingapp;
+Database changed
+mysql> create table topcategory
+    -> as
+    -> select * from shoppingmall.topcategory;
+Query OK, 5 rows affected (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select*from topcategory;
++----------------+-----------+
+| topcategory_id | top_name  |
++----------------+-----------+
+|              1 | Top       |
+|              2 | Down      |
+|              3 | Accessory |
+|              4 | Shoes     |
+|              5 | Hat       |
++----------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> create table subcategory
+    -> as
+    -> select * from shoppingmall.subcategory;
+Query OK, 20 rows affected (0.12 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
+mysql> create table product
+    -> as
+    -> select * from shoppingmall.product;
+Query OK, 2 rows affected (0.03 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> show tables;
++-----------------------+
+| Tables_in_shoppingapp |
++-----------------------+
+| product               |
+| subcategory           |
+| topcategory           |
++-----------------------+
+3 rows in set (0.00 sec)
