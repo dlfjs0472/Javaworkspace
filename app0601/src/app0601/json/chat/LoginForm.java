@@ -104,7 +104,7 @@ public class LoginForm extends JFrame{
 		
 		//현재 클래스가 Frame을 상속받은 자식이므로, Frame이 보유한 
 		//메서드를 내것처럼 쓸 수 있다..
-		setBounds(1000,300,400,160);//윈도우의 크기 설정 
+		setBounds(900,300,400,160);//윈도우의 크기 설정 
 		
 		this.setVisible(true);//윈도우 보이게
 		

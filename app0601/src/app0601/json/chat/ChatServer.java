@@ -66,7 +66,7 @@ public class ChatServer extends JFrame{
 		
 		//view
 		setVisible(true);
-		setBounds(0, 100, 300, 400);
+		setBounds(600, 300, 300, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
