@@ -20,16 +20,12 @@ public class XMLTable extends JFrame{
 	JScrollPane scroll;
 	
 	public XMLTable() {
-		
-		table = new JTable();
+		table= new JTable();
 		scroll = new JScrollPane(table);
-		
-		
-		
+
 		add(scroll);
 		
-		
-		setBounds(600, 300, 600, 450);
+		setSize(600,450);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
@@ -37,17 +33,20 @@ public class XMLTable extends JFrame{
 	}
 	
 	public void loadXML() {
-		SAXParserFactory factory = SAXParserFactory.newInstance(); //팩토리의 인스턴스 얻기 (new 못함)
-		
+		SAXParserFactory factory=SAXParserFactory.newInstance(); //팩토리의 인스턴스 얻기
 		try {
 			URL url = this.getClass().getClassLoader().getResource("Pets.xml");
 			URI uri=url.toURI();
-			SAXParser saxParser=factory.newSAXParser();// 파서 생성
-			saxParser.parse(new File(uri), new PetHandler());
-			//JTable의 모델 데이터와 파싱한 결과와의 매칭은 파싱 전? 파싱한 수?
-			PetModel model=new PetModel();
-			model.data=
-			table.setModel(model);
+			SAXParser saxParser=factory.newSAXParser();
+			System.out.println("파싱을 시작합니다");
+			PetHandler handler=null;
+			saxParser.parse(new File(uri), handler=new PetHandler());
+			System.out.println("파싱을 종료합니다");			
+			//JTable의 모델 데이터와 파싱한 결과와의 매칭은 파싱전? 파싱한 후?
+			PetModel model = new PetModel();
+			model.data=handler.petList;
+			table.setModel(model);//바로 이 순간부터 JTable 은 TableModel의
+			//메서드들을 호출하게된다~?? 왜? 그래야 표를 구성하니깐..
 			
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
@@ -58,10 +57,9 @@ public class XMLTable extends JFrame{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-			
-		 
-		
+
 	}
+	
 	public static void main(String[] args) {
 		new XMLTable();
 	}
