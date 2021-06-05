@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pets>
+	<pet>
+		<type>거북이</type>
+		<name>림보</name>
+		<age>23</age>
+	</pet>
+	<pet>
+		<type>말티즈</type>
+		<name>뽀미</name>
+		<age>10</age>
+	</pet>
+	<pet>
+		<type>고양이</type>
+		<name>까미</name>
+		<age>3</age>
+	</pet>
+	<pet>
+		<type>금붕어</type>
+		<name>니모</name>
+		<age>2</age>
+	</pet>
+</pets>
